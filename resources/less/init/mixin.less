@@ -1,0 +1,73 @@
+/* mixin */
+.flex() {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex--column() {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.flex--row() {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.flex-flex(@flex: 1) {
+    -webkit-box-flex: @flex;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: @flex;         /* OLD - Firefox 19- */
+    -webkit-flex: @flex;          /* Chrome */
+    -ms-flex: @flex;              /* IE 10 */
+    flex: @flex;    
+}
+
+.flex-content(@content) {
+    -webkit-justify-content: @content;
+    -ms-flex-pack: @content;
+    justify-content: @content;
+}
+
+.text-overflow(@val: ellipsis) {
+    text-overflow: @val;
+}
+
+.filter(@val: blur(5px)) {
+    -webkit-filter: @val;
+    -moz-filter:    @val;
+    -o-filter:      @val;
+    -ms-filter:     @val;
+    filter:         @val;
+}
+.transition(@type:all, @duration:.4s, @ease:ease-out) when not (@type = all) {
+        -ms-transition:     -ms-@type @duration @ease;
+       -moz-transition:    -moz-@type @duration @ease;
+    -webkit-transition: -webkit-@type @duration @ease;
+            transition:         @type @duration @ease;
+}
+
+.transform(...) {
+  -webkit-transform: @arguments;
+     -moz-transform: @arguments;
+      -ms-transform: @arguments;
+       -o-transform: @arguments;
+          transform: @arguments;
+}
+
+.gradient(...) {
+    background: -webkit-linear-gradient(@arguments); /* For Safari 5.1 to 6.0 */
+    background:    -moz-linear-gradient(@arguments); /* For Firefox 3.6 to 15 */
+    background:      -o-linear-gradient(@arguments); /* For Opera 11.1 to 12.0 */
+    background:         linear-gradient(@arguments); /* Standard syntax */
+}
+
+/* END mixin */

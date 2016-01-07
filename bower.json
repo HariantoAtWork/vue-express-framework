@@ -1,0 +1,33 @@
+{
+  "name": "vue-express-framework",
+  "description": "Deployment workflow for Vue Express Browserify Bootstrap LESS Gulp CDN",
+  "main": "gulpfile.js",
+  "authors": [
+    "Harianto van Insulinde <hariantoatwork@gmail.com>"
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "VueJS",
+    "Express",
+    "Bootstrap",
+    "LESS",
+    "Gulp",
+    "Browserify",
+    "mdstn.com",
+    "mizu.work"
+  ],
+  "moduleType": [],
+  "homepage": "mizu.work",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

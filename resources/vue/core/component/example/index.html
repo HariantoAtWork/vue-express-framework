@@ -1,0 +1,29 @@
+<h2>  
+    This is Example Component
+</h2>  
+<p>  
+    Message from Parent: {{msg}}
+</p>
+
+<h2>List of girls</h2>  
+<div class="input-group">  
+    <span class="input-group-addon" id="basic-addon1"><span class="fa fa-search"></span></span>
+    <input type="text" 
+             class="form-control" 
+             placeholder="filter girls by name"
+             v-model="filterQuery" />
+</div>
+
+<div class="container-fluid">  
+    <div class="row">
+        <div class="col-xs-6">Name</div>
+        <div class="col-xs-6">Age</div>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item row"
+            v-for="item in list | filterGirls filterQuery">
+            <span class="col-xs-6">{{item.name}}</span>
+            <span class="col-xs-6">{{item.age}}</span>
+        </li>
+    </ul>
+</div>  

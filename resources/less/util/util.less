@@ -1,0 +1,65 @@
+/* util */
+.u-box {
+    .flex();
+}
+
+.u-box--column {
+    .flex--column();
+}
+
+.u-box--row {
+    .flex--row();
+}
+
+.u-box-flex {
+    .flex-flex(1);
+}
+
+.u-relative {
+    position: relative;
+}
+.u-absolute {
+    position: absolute;
+}
+.u-absolute-full {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+.u-hidden {
+    display: none;
+}
+
+.u-overflow {
+    overflow: hidden;
+    &-x {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translateZ(0px);
+        -webkit-transform: translate3d(0,0,0);
+        -webkit-perspective: 1000;
+    }
+
+    &-y {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translateZ(0px);
+        -webkit-transform: translate3d(0,0,0);
+        -webkit-perspective: 1000;
+    }
+}
+
+.u-text-overflow {
+    white-space: nowrap;
+    .text-overflow();
+}
+
+.u-height {
+    height: 100%;
+}
+/* END util */

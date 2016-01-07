@@ -1,0 +1,54 @@
+/* layout */
+body {  
+    min-height: 100vh;
+}
+
+.mizu-container {
+    .flex();
+    .flex--column();
+    min-height: 100vh;
+}
+
+.mizu-header,
+.mizu-footer {
+    background-color: #646065;
+    color: white;
+    height: 50px;
+}
+
+
+.mizu-body {
+    .flex();
+    .flex--column();
+}
+
+.mizu-content {
+    color: #766561;
+    background-color: #CBCBCB;
+}
+
+.mizu-nav {
+    order: -1;
+    color: #EDE8E1;
+    background-color: #D2C4BE;
+}
+
+.mizu-ads {
+    color: #EDE8E1;
+    background-color: #D2C4BE;
+}
+
+@media (min-width: 768px) {
+    .mizu-body {
+        .flex--row();
+        .flex-flex(1)
+    }
+    .mizu-content {
+        .flex-flex(1)
+    }
+    .mizu-nav, .mizu-ads {
+        /* 12em is the width of the columns */
+        .flex-flex(0 0 12em)
+    }
+}
+/* END layout */
