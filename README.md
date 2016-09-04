@@ -23,7 +23,7 @@ nvm use 5.2.0
 npm install
 bower install
 . patch_bootstrap_less.sh
-gulp less js
+gulp export
 ```
 
 
@@ -32,6 +32,8 @@ gulp less js
 ```bash
 npm start
 ```
+> Check http://localhost:3000
+
 
 or on different port
 ```bash
@@ -55,6 +57,7 @@ More gulp tasks options, for example: `gulp less`
 - js
 - js:bower_components
 - js:browserify
+- export
 - watch
 - watch:bootstrap
 - watch:bower_components

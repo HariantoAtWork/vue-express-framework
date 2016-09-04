@@ -1,18 +1,120 @@
 /* util */
+
 .u-box {
     .flex();
+
+    &--inline {
+        display: inline-flex;
+    }
+
+    &--column {
+        .flex--column();
+    }
+
+    // use this to change behaviour to .flex--row() in media queries
+    &--column-query {
+        .flex--column();
+    }
+
+    &--row {
+        .flex--row();
+    }
+
+    // use this to change behaviour to .flex--column() in media queries
+    &--row-query {
+        .flex--row();
+    }
+
+    // flex-wrap on default `nowrap` where items is inline
+    &--wrap {
+        flex-wrap: wrap;
+    }
+    &--wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    // justify content HORIZONTALLY - left/right
+    &--justify {
+        &-flex-start {
+            justify-content: flex-start;
+        }
+        &-flex-end {
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+        }
+        &-center {
+            justify-content: center;
+        }
+        &-space-between {
+            justify-content: space-between;
+        }
+        &-space-around {
+            justify-content: space-around;
+        }
+    }
+
+    // align content VERTICALLY - up/down
+    &--align {
+        &-flex-start {
+            align-items: flex-start;
+        }
+        &-flex-end {
+            align-items: flex-end;
+        }
+        &-center {
+            -webkit-align-items: center; /* Safari 7.0+ */
+            align-items: center;
+        }
+        &-stretch {
+            align-items: stretch;
+        }
+        &-space-between {
+            align-items: space-between;
+        }
+        &-space-around {
+            align-items: space-around;
+        }
+    }
 }
 
-.u-box--column {
-    .flex--column();
-}
-
-.u-box--row {
-    .flex--row();
-}
-
-.u-box-flex {
+.u-flex {
     .flex-flex(1);
+
+    &--minWidth {
+        flex-basis: 320px;
+    }
+
+    &--grow {
+        flex-grow: 1;
+    }
+
+    &--shrink {
+        flex-shrink: 0;
+    }
+
+    &--auto {
+        align-self: auto;
+    }
+
+    &--flex-start {
+        align-self: flex-start;
+    }
+
+    &--flex-end {
+        align-self: flex-end;
+    }
+
+    &--center {
+        align-self: center;
+    }
+
+    &--baseline {
+        align-self: baseline;
+    }
+
+    &--stretch {
+        align-self: stretch;
+    }
 }
 
 .u-relative {

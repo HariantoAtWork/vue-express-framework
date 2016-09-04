@@ -7,7 +7,7 @@ const
     gulp         = require('gulp'),  
     less         = require('gulp-less'), // compiles less to CSS
     autoprefix   = require('gulp-autoprefixer'), // CSS browser compatibility
-    cssmin       = require('gulp-minify-css'), // minifies CSS
+    cssmin       = require('gulp-clean-css'), // minifies CSS
     concat       = require('gulp-concat'),
     uglify       = require('gulp-uglify'), // minifies JS
     rename       = require('gulp-rename'),
@@ -225,7 +225,8 @@ gulp.task('less',   ['less:bootstrap']);
 gulp.task('js',     ['js:bower_components','js:browserify']);  
 gulp.task('reload', ['reload:server', 'reload:browser']);
 gulp.task('watch',  ['watch:bootstrap', 'watch:bower_components', 'watch:browserify']);
+gulp.task('export', ['less', 'js']);
 
 // --- DEFAULT
 // When you run only with: `gulp`
-gulp.task('default', ['watch', 'less', 'js']); 
+gulp.task('default', ['watch', 'export']); 
