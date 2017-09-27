@@ -1,4 +1,4 @@
-# Framework Bootstrap with ExpressJS, VueJS, Twitter Bootsrap, Less, Gulp, Browserify (2016)
+# Framework Bootstrap with ExpressJS, VueJS, Twitter Bootstrap, Less, Gulp, Browserify (2016)
 
 Now using node v5.2.0 (npm v3.3.12)
 
